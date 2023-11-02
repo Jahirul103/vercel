@@ -25,7 +25,7 @@ class BackendApplication:
         self.database.save_chatbot_response(chatgpt_response)
 
         # Generate a link to the chatbot based on the saved response
-        chatbot_link = f"https://your-website.com/chatbot/{chatgpt_response.id}"
+        chatbot_link = f"https://10ms.com/chatbot/{chatgpt_response.id}"
 
         # Return the chatbot link
         return chatbot_link
