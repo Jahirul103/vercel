@@ -8,7 +8,7 @@ class BackendApplication:
         self.database = database
 
         # Create an OpenAI API object
-        self.openai = OpenAIApi(openai_api_key="YOUR_OPENAI_API_KEY")
+        self.openai = OpenAIApi(openai_api_key="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")
 
     def generate_chatbot_link(self, prompt, business_data):
         # Extract the prompt and business data from the database
