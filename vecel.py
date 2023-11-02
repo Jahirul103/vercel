@@ -8,7 +8,7 @@ class BackendApplication:
         self.database = database
 
         # Create an OpenAI API object
-        self.openai = OpenAIApi(openai_api_key="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")
+        self.openai = OpenAIApi(openai_api_key="YOUR_OPENAI_API_KEY")
 
     def generate_chatbot_link(self, prompt, business_data):
         # Extract the prompt and business data from the database
@@ -24,8 +24,8 @@ class BackendApplication:
         # Save the ChatGPT response to the database
         self.database.save_chatbot_response(chatgpt_response)
 
-        # Generate a link to the chatbot based on the saved response
-        chatbot_link = f"https://10ms.com/chatbot/{chatgpt_response.id}"
+        # Generate a relative link or unique identifier for the chatbot
+        chatbot_link = f"/chatbot/{chatgpt_response.id}"
 
         # Return the chatbot link
         return chatbot_link
